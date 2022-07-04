@@ -9,7 +9,7 @@ import UIKit
 
 class SegundaViewController: UIViewController {
     
-    var livro: ViewController.Livro? = nil
+    var livro: Livro? = nil
     
     @IBOutlet weak var descricao: UILabel!
     @IBOutlet weak var preco: UILabel!

@@ -15,6 +15,7 @@
 		DC6FDFB82869E92A007E0C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6FDFB62869E92A007E0C98 /* LaunchScreen.storyboard */; };
 		DC6FDFC52869F9F8007E0C98 /* SegundaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6FDFC42869F9F8007E0C98 /* SegundaViewController.swift */; };
 		DC6FDFC82869FA50007E0C98 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6FDFC72869FA50007E0C98 /* ViewCell.swift */; };
+		DCAC21632873254A00AD718A /* AdicionarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC21622873254A00AD718A /* AdicionarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DC6FDFB92869E92A007E0C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6FDFC42869F9F8007E0C98 /* SegundaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegundaViewController.swift; sourceTree = "<group>"; };
 		DC6FDFC72869FA50007E0C98 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		DCAC21622873254A00AD718A /* AdicionarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DC6FDFAB2869E927007E0C98 /* AppDelegate.swift */,
 				DC6FDFAD2869E927007E0C98 /* SceneDelegate.swift */,
 				DC6FDFAF2869E927007E0C98 /* ViewController.swift */,
+				DCAC21622873254A00AD718A /* AdicionarViewController.swift */,
 				DC6FDFC42869F9F8007E0C98 /* SegundaViewController.swift */,
 				DC6FDFB12869E927007E0C98 /* Main.storyboard */,
 				DC6FDFB42869E92A007E0C98 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				DC6FDFAC2869E927007E0C98 /* AppDelegate.swift in Sources */,
 				DC6FDFAE2869E927007E0C98 /* SceneDelegate.swift in Sources */,
 				DC6FDFC82869FA50007E0C98 /* ViewCell.swift in Sources */,
+				DCAC21632873254A00AD718A /* AdicionarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

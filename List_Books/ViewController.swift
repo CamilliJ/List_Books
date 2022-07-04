@@ -6,28 +6,29 @@
 //
 
 import UIKit
+struct Livro {
+    let titulo: String
+    let imagem: String
+    let preco: String
+    let description: String
+}
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
-    @IBOutlet weak var NomeLivro: UILabel!
+
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var PrecoLivro: UILabel!
-    @IBOutlet weak var DescripitonLivro: UILabel!
-    @IBOutlet weak var ImageLivro: UIImageView!
     
-    struct Livro {
-        let titulo: String
-        let imagem: String
-        let preco: String
-        let description: String
-    }
+    
+    
 
     
-    let arrayLivros = [
+    var arrayLivros = [
         Livro(titulo: "Rainha Vermelha | 1º Volume", imagem: "rainha", preco: "R$33,90", description: "Mare e sua família são vermelhos: plebeus, humildes, destinados a servir uma elite prateada cujos poderes sobrenaturais os tornam quase deuses. Mare rouba o que pode para ajudar sua família a sobreviver e não tem esperanças de escapar do vilarejo miserável onde mora."),
         
         Livro(titulo: "Trono de Vidro | 1º Volume", imagem: "trono", preco: "R$39,90", description: "Trono de vidro tem como protagonista Celaena Sardothien, a maior assassina de Adarlan, hoje condenada à escravidão nas minas de sal. Celaena recebe a proposta de participar de uma competição para se tornar a campeã do rei, em troca de sua liberdade."),
+        
+        Livro(titulo: "Manual de assassinato para boas garotas", imagem: "assassino", preco: "R$31,90", description: "Todos os moradores conhecem a história: Andie Bell, a garota mais popular e bonita da escola, foi assassinada pelo namorado, Sal Singh, que se suicidou após o crime. Apesar de o caso nunca ter ido a julgamento, ninguém diz “talvez”, nem “supostamente”, nem “tudo indica que” ao falar do crime."),
     ]
     
     
@@ -58,6 +59,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let livroSelecionado = sender as! Livro
             let viewController = segue.destination as! SegundaViewController
             viewController.livro = livroSelecionado
+        } else if segue.identifier == "new"{
+            let viewController = segue.destination as! AdicionarViewController
+            viewController.delegate = self
         }
     }
     
@@ -67,8 +71,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         performSegue(withIdentifier: "ProximaTela", sender: livro)
     }
     
-    
-
-
 }
 
+extension ViewController:AdicionarViewControllerDelegate{
+    func salvarbtn(livro:Livro) {
+        arrayLivros.append(livro)
+        tableView.reloadData()
+    }
+}
